@@ -1,0 +1,84 @@
+{"adult":false,
+"backdrop_path":"/phszHPFVhPHhMZgo0fWTKBDQsJA.jpg",
+"belongs_to_collection":{"id":8945,"name":"Mad Max Collection","poster_path":"/jZowUf4okNYuSlgj5iURE7CDMho.jpg","backdrop_path":"/zI0q2ENcQOLECbe0gAEGlncVh2j.jpg"},
+"budget":150000000,
+"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":878,"name":"Science Fiction"},{"id":53,"name":"Thriller"}],
+"homepage":"http://www.madmaxmovie.com/",
+"id":76341,"imdb_id":"tt1392190",
+"original_language":"en",
+"original_title":"Mad Max: Fury Road",
+"overview":"An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order. There's Max, a man of action and a man of few words, who seeks peace of mind following the loss of his wife and child in the aftermath of the chaos. And Furiosa, a woman of action and a woman who believes her path to survival may be achieved if she can make it across the desert back to her childhood homeland.",
+"popularity":36.807271,"poster_path":"/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
+"production_companies":[{"name":"Village Roadshow Pictures","id":79},{"name":"Kennedy Miller Productions","id":2537}],
+"production_countries":[{"iso_3166_1":"ZA","name":"South Africa"},{"iso_3166_1":"AU","name":"Australia"},{"iso_3166_1":"US","name":"United States of America"},{"iso_3166_1":"NA","name":"Namibia"}],"release_date":"2015-05-13","revenue":378436354,"runtime":120,"spoken_languages":[{"iso_639_1":"en","name":"English"}],
+"status":"Released","tagline":"What a Lovely Day.","title":"Mad Max: Fury Road","video":false,"vote_average":7.2,"vote_count":6874}
+
+
+/* global fetch, li */
+alert("abhinay");
+var url="https://api.themoviedb.org/3/movie/76341?api_key=43961c82f52092600e768e120a220142";
+const Mvlist = document.getElementById("Movies");
+fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            let movies = data.results; 
+          alert(movies);
+          Mvlist.innerHTML=movies;
+
+      append(Mvlist, li);
+    })
+    .catch(function(error) {
+        alert(error);
+    });   
+
+
+document.querySelector('input').oninput = function() {
+    console.log(this.value);
+};
+
+
+var poster="http://api.themoviedb.org/3/movie/"+id_img+"?api_key=43961c82f52092600e768e120a220142";
+    alert(poster);
+    var text=document.getElementById('movid');
+    var url="https://api.themoviedb.org/3/search/movie?api_key=43961c82f52092600e768e120a220142&language=en-US&query="+text+"&page=1&include_adult=false";
+    var list = document.getElementById('moviel');
+    list.innerHTML="";
+fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            movies=data.results;
+    return movies.map(function(movie) {  
+      let l = createNode('option');
+          l.id=movie.id;
+          l.value=movie.original_title;
+          
+      list.appendChild(l);    
+    });
+        });
+
+
+{
+"adult":false,
+"backdrop_path":"/wu4tawMznxUvqP21lUH6RKrv3LQ.jpg",
+"belongs_to_collection":null,
+"budget":8000000,"genres":[{"id":35,"name":"Comedy"}],
+"homepage":"http://letsnotandsaywedid.com/",
+"id":37735,
+"imdb_id":"tt1282140",
+"original_language":"en",
+"original_title":"Easy A",
+"overview":"After a little white lie about losing her virginity gets out, a clean cut high school girl sees her life paralleling Hester Prynne's in \"The Scarlet Letter,\" which she is currently studying in school - until she decides to use the rumor mill to advance her social and financial standing.",
+"popularity":2.974409,
+"poster_path":"/1pgPO3OfSm2inpODMqg2RNmLW90.jpg",
+"production_companies":[{"name":"Screen Gems","id":3287},{"name":"Olive Bridge Entertainment","id":7291}],
+"production_countries":[{"iso_3166_1":"US","name":"United States of America"}],
+"release_date":"2010-09-10","revenue":74952305,
+"runtime":92,
+"spoken_languages":[{"iso_639_1":"en","name":"English"}],
+"status":"Released",
+"tagline":"The rumour-filled totally false account of how I ruined my flawless reputation.",
+"title":"Easy A",
+"video":false,
+"vote_average":6.7,
+"vote_count":1545
+}
