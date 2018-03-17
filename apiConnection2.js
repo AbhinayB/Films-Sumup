@@ -1,5 +1,5 @@
 var indent_k;
-var predrop='url(backdrop.png)';
+var predrop='url(backdrop.jpg)';
 var movielist = [];
 
 
