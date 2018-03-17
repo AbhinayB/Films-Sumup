@@ -1,4 +1,4 @@
-# Films-Sumup
+# Tracker for time spent on movies
 
 Count movie is the mobile and desktop compatible website with an exciting and interactive web interface, to sum up, the film durations for user selected films.
 
