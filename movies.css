@@ -11,19 +11,19 @@ html, body, .glass{
     color: rgba(204, 204, 204, 0.9);
 }
 input{
-    width:80%;
+    width:70%;
     height:4rem;
     font-family: 'Libre Baskerville', serif;
-  font-size: 100%;   /* if that’s what you want... */
-  color: whitesmoke;
-  background: rgba(204, 204, 204, 0.5);
+  font-size: 150%;   /* if that’s what you want... */
+  color: #000000;
   border: none;
-  border-radius: 10px;
-  opacity:0.7
-  
+  border-radius: 7px;
+  opacity:0.4;
+  font-weight: bolder;
+  background:rgba(204, 204, 204, 0.5);
 }
 .lister{
-    width:80%;
+    width:70%;
 }
 .wholeBox{
     width: 100%;
@@ -39,7 +39,7 @@ input:focus {
     height:100%;
     width:100%;
     text-align:center;
-    background:url('backdrop.png') no-repeat center;
+    background:url('backdrop.jpg') no-repeat center;
     background-size:cover;
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
@@ -91,9 +91,9 @@ spam{
     opacity: 0;
     padding-top: 50px;
     font-family: 'Libre Baskerville', serif;
-    font-size: 1.3vw;
+    font-size: 80%;
     font-weight: bold;
-    
+    overflow: scroll;
 
 }
 spam:hover{
@@ -129,18 +129,26 @@ ul ul{
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #d4af37;
+    font-weight: bold;
+   font-size:20px;
+    color:    #000000;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #d4af37;
+    font-weight: bold;
+   font-size:20px;
+   color:    #000000;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #d4af37;
+    font-weight: bold;
+   font-size:20px;
+   color:    #000000;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #d4af37;
+   color:    #000000;
+   font-weight: bold;
+   font-size:20px;
 }
 
 @media screen and (max-device-width : 480px)
@@ -161,11 +169,29 @@ ul ul{
     font-family: 'Libre Baskerville', serif;
     font-size: 3vw;
     font-weight: bold;
-    
+    overflow: scroll;
 
+}
+input{
+    width:90%;
+    height:4rem;
+    font-family: 'Libre Baskerville', serif;
+  font-size: 150%;   /* if that’s what you want... */
+  color: #000000;
+  border: none;
+  border-radius: 7px;
+  opacity:0.4;
+  font-weight: bolder;
+  background:rgba(204, 204, 204, 0.5);
+  
+  
+}
+.lister{
+    width:90%;
 }
 }
 @media screen and (max-device-width : 1204px)
 {
   
 }
+
